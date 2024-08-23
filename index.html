@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Final Project - Movies</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+	<h1>Movies Scatterplot</h1>
+	<div class="axisSelector side">
+		<b>X-Axis:</b>
+		<select id="xAxisAttrSelector" onchange="updateScatter()">
+			<option value="duration">Duration</option>
+			<option value="aspect_ratio">Aspect Ratio</option>
+			<option value="imdb_score">IMDb Score</option>
+			<option value="budget">Budget</option>
+			<option value="gross">Gross</option>
+			<option value="num_user_for_reviews">Numbers of Users for Review</option>
+			<option value="facenumber_in_poster">Number of Faces in Poster</option>
+			<option value="num_voted_users">Number of Voted Users</option>
+		</select>  
+	</div>
+	<div class="axisSelector side">
+		<b>Y-Axis:</b>
+		<select id="yAxisAttrSelector" onchange="updateScatter()">
+			<option value="duration">Duration</option>
+			<option value="aspect_ratio">Aspect Ratio</option>
+			<option value="imdb_score">IMDb Score</option>
+			<option value="budget">Budget</option>
+			<option value="gross">Gross</option>
+			<option value="num_user_for_reviews">Numbers of Users for Review</option>
+			<option value="facenumber_in_poster">Number of Faces in Poster</option>
+			<option value="num_voted_users">Number of Voted Users</option>
+		</select>  
+	</div>
+	<div class="yearSelector side">
+		<b>Year:</b>
+		<select id="yearAttrSelector" onchange="updateScatter()">
+			<option value="All">All</option>
+			<option value="2010">2010</option>
+			<option value="2011">2011</option>
+			<option value="2012">2012</option>
+			<option value="2013">2013</option>
+			<option value="2014">2014</option>
+			<option value="2015">2015</option>
+			<option value="2016">2016</option>
+		</select>
+	</div>
+	<div id="main">
+		<svg id="svg1" width="800" height="600">
+		</svg>
+		<svg id="svg2" width="590" height="600">
+		</svg>
+    </div>
+</body>
+<script src="//d3js.org/d3.v6.min.js"></script>
+<script src="./d3-tip.js"></script>
+<script src="./main.js"></script>
+</html>
